@@ -1,0 +1,66 @@
+Vue源码分析
+一、准备
+Array.prototype.slice.call(obj)	将伪数组obj变成真正的数组
+
+Object.defineProperty(obj, newPropertyName,{ config })  给obj对象设置一个新的属性
+Object.keys(obj)	得到obj对象自身可枚举属性（key值）组成的数组
+
+obj.hasOwnProperty(prop)	判断prop是否是obj自身的属性
+
+DocumentFragment	 文档碎片（高效批量更新多个节点）
+1/创建fragment
+const fragment = document.createDocumentFragment()
+2/取出ul中所有子节点保存到fragment中
+let child
+while(child = ul.firstChild){
+	fragment.appendChild(child)
+}
+3/更新fragment中所有li的文本
+Array.prototype.slice.call(fragment.childNodes).forEach(node=>{
+	if(node.nodeType === 1){
+		node.textContext = 'zzz'；
+	}
+})
+4/将fragment插入ul中
+ul.appendChild(fragment)
+
+二、数据代理
+通过一个对象代理对另一个对象中属性的操作（读、写）
+
+data(){
+  name: 'zhangsan'	
+}
+vm.name	vm代理对data数据的读操作
+vm.name = 'lisi'  vm代理对data的写操作
+
+三、模板解析
+
+四、数据绑定
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
