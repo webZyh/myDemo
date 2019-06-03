@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包与变量</title>
+</head>
+<body>
+<script>
+function createFunctions(){
+	var result = new Array();
+
+	/*for(var i=0; i<10; i++){
+		result[i] = function(){
+			return i;
+		}
+	}*/
+
+	for (var i=0; i < 10; i++){ 
+		result[i] = function(num){ 
+			return function(){ 
+				return num; 
+			}; 
+		}(i);
+	}
+	return result;
+}	
+console.log(createFunctions())
+</script>
+</body>
+</html>

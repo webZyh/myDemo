@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型模式</title>
+</head>
+<body>
+<script>
+function Person(){};
+/*Person.prototype.name = 'zyh';
+Person.prototype.age = 29; 
+Person.prototype.job = "Software Engineer"; 
+Person.prototype.sayName = function(){ 
+	console.log(this.name); 
+}; 
+var person1 = new Person(); */
+
+//var friend = new Person(); 	//这个实例指向原型对象
+Person.prototype = { 		//重写了原型对象
+	name : "Nicholas", 
+	age : 29, 
+	job : "Software Engineer", 
+	sayName : function () { 
+		alert(this.name); 
+	} 
+}; 
+var friend = new Person();  //这个实例可以访问重写后的原型对象中的属性和方法
+friend.sayName();
+
+</script>
+</body>
+</html>

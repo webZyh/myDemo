@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<script src="10.2.1.js"></script>
+</head>
+<body>
+	<ul id="ul" class="ul">
+		
+	</ul>
+	<div class="ul">
+		<p class="ul"></p>
+	</div>
+<script>
+	//创建文档片段
+	let fragment = document.createDocumentFragment();
+	for(let i=0; i<3; i++){
+		let li = document.createElement('li');
+		li.appendChild(document.createTextNode('item'+i));
+		fragment.appendChild(li);
+	}
+	ul.appendChild(fragment);
+
+	/*loadScript('aaa');
+	loadStyle('style.css')*/
+
+
+	console.log(getByClass('ul'))
+</script>
+</body>
+</html>

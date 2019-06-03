@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>url解析</title>
+</head>
+<body>
+<script>
+	let url = "www.baidu.com?username='zyh'&password='123'";
+	function getQueryStringArgs(url){
+		let qs = url.split('?')[1];
+		console.log(qs)
+		let arr = [];
+		items = qs.split('&');
+		console.log(items)
+		item = null;
+		name = null;
+		value = null;
+		len = items.length;
+		for(var i = 0; i< len; i++){
+			item = items[i].split('=');
+
+			name = item[0];
+			value = item[1];
+
+			arr[name] = value;
+		}
+		return arr;
+	}
+	console.log(getQueryStringArgs(url));
+</script>
+</body>
+</html>

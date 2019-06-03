@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浏览器窗口位置</title>
+</head>
+<body>
+<script>
+	window.onload = function(){
+		let leftPos = (typeof window.screenLeft === 'number')? window.screenLeft: window.screenX;
+		let topPos = (typeof window.screenTop === 'number')? window.screenTop: window.screenY;
+
+		console.log(leftPos + '---' + topPos);
+
+		//window.moveTo(100,300);
+		window.moveBy(0,100);
+	}
+</script>
+</body>
+</html>

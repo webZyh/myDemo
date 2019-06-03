@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浏览器窗口大小</title>
+</head>
+<body>
+<script>
+	window.onload = function(){
+		let pageWidth = document.documentElement.clientWidth || document.body.clientWidth;
+
+		let pageHeight = document.documentElement.clientHeight || document.body.clientHeight;
+
+
+		// window.resizeTo(100, 100);		// 浏览器窗口的新宽度和新高度
+		// window.resizeBy(100, 50);		// 新窗口与原窗口的宽度和高度之差
+		console.log(pageWidth,pageHeight)
+	}
+</script>
+</body>
+</html>

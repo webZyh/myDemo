@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>构造函数模式</title>
+</head>
+<body>
+<script>
+	function Person(name,age,job){
+		this.name = name;
+		this.age = age;
+		this.job = job;
+		this.sayName = function(){
+			alert(this.name);
+		}
+	}
+	var person1 = new Person('zyh','18','Software Engineer')
+	console.log(person1.name)
+</script>
+</body>
+</html>

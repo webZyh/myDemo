@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			background: yellow;
+			margin: 100px 0 0 100px;
+			border: 10px solid #ccc;
+		}
+		body{
+			height: 2000px;
+		}
+	</style>
+</head>
+<body>
+<div class="box"></div>
+<script>
+//事件对象event的属性：offsetX、clientX、pageX、screenX
+
+var oBox = document.querySelector('.box');
+oBox.addEventListener('click',function(event){
+	//offsetX、offsetY 距离box左上角的距离，不包括边框
+	//console.log(event.offsetX+ '-----' + event.offsetY);
+	
+	//clientX、clientY 距离浏览器左上角的距离，不包括滚动的距离，包括边框
+	console.log(event.clientX+ '-----' + event.clientY);
+
+	// pageX = clientX + scrollLeft
+	// pageY = clientY + scrollTop
+
+	//pageX、pageY 距离浏览器左上角的距离+滚动的距离，包括边框
+	console.log(event.pageX+ '-----' + event.pageY);
+
+	//screenX、screenY 距离桌面左上角的距离，不包括滚动的距离，包括边框
+	console.log(event.screenX+ '-----' + event.screenY);
+})
+
+//clientWidth、 offsetWidth、offsetLeft、scrollWidth
+</script>
+</body>
+</html>
