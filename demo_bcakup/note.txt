@@ -1,0 +1,53 @@
+﻿���⣺input�������һ����ʼֵ���˳�ʼֵ��ͨ����̨�ӿڱ�����vuex�У�ֻҪ��ʼֵ�仯����ʾһ���޸İ�ť
+˼·�� �洢һ����ʼֵ�������ڵ�ֵ�ı䣬�ͳ�ʼֵ���бȶԣ�����ͬ����ʾ�޸İ�ť
+ʵ�ʲ�����
+����1��v-model��ʹ�ü������ԣ�����������Ҫ����get��set���޸ı��������ݺ󣬳�ʼֵҲ��ӦΪset�ı�---ʧ��
+
+    AppName: {
+      get() {
+        return this.oemApplication ? this.oemApplication.appName : '';
+      },
+      set(val){
+         this.oemApplication.appName = val
+      }
+    },
+    ......
+
+����2����Ҫ����ĳ�ʼֵ���ü������ԣ�ֱ�ӻ�ȡ��̨�Ľӿ�ֵ�����������ݰ�ʹ�������һ������������data�У�
+     ��ʼʱʹ�����ñ����ʼֵ�ü������ԣ���ʱ����Ϊundefind��ȡ�����������Ե�ֵ---ʧ��
+   data(){
+      appName: this.originAppName,
+      appPackName: this.originAppPackName,	
+   }
+   originAppName: {
+      get() {
+        return this.oemApplication ? this.oemApplication.appName : '';
+      }
+    },
+    originAppPackName: {
+      get() {
+        return this.oemApplication ? this.oemApplication.appPackName : '';
+      }
+    },
+����3������ʼֵ���ó�һ��data�еı������ڳ�ʼ���ķ����г�ʼ�������ֵ���޸ı��������ݺ󣬳�ʼֵҲ��ı�---ʧ��
+
+����4����vuex��state���½�һ��������ר�����ڱ����ʼֵ����mutation�еõ���̨���ݺ󣬴洢��ֵ����ҳ����Ҫʱֱ��ȡ����
+     ��ʱ�޸ı�����ֵ������Ӱ�������ʼֵ---�ɹ�
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
