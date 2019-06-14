@@ -99,3 +99,7 @@ el-upload里面的参数对应的函数可以传递额外的参数吗？
     </template>
   </el-table-column>
 </el-table>
+
+
+productTableData: [],
+uploadShow: true,
