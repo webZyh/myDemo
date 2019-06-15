@@ -103,3 +103,46 @@ el-upload里面的参数对应的函数可以传递额外的参数吗？
 
 productTableData: [],
 uploadShow: true,
+
+
+.el-table
+  .icon-upload
+    display inline-block
+    width 50px
+    height 50px
+    .avatar-uploader .el-upload 
+      border: 1px dashed #d9d9d9
+      border-radius: 6px
+      cursor: pointer
+      position: relative
+      overflow: hidden
+    .avatar-uploader-icon 
+      font-size: 20px
+      color: #8c939d
+      width: 50px
+      height: 50px
+      line-height: 50px
+      text-align: center
+    .avatar 
+      width: 50px
+      height: 50px
+      display: block
+  img
+    width 50px
+    height 50px
+
+
+ // 上传产品图片成功后，渲染函数
+productImgRender() {
+  this.$axios.get('/oemApplication/ui/productImg').then((prodData) => {
+    this.productData = prodData.data.data;
+    // console.log(this.productData);
+    const { selectValue } = this;
+    this.productData.forEach((item) => {
+      if (selectValue === item.productTypeId) {
+        this.openImgUrl = item.openImg ? item.openImg : item.defaultOpenImg;
+        this.closeImgUrl = item.closeImg ? item.closeImg : item.defaultCloseImg;
+      }
+    })
+  })
+},   
