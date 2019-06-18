@@ -1,0 +1,44 @@
+基本包装类型
+
+Number
+  valueOf()
+  toString()
+  toFixed()
+  toExponential()
+  toPercision()
+Boolean
+  valueOf()
+  toString()
+String
+  属性
+  length
+  基本方法
+  valueOf()
+  toString()
+  字符方法
+  charAt()
+  charCodeAt()
+  字符串操作
+  concat()
+  slice()
+  substring()
+  substr()
+  字符串位置方法
+  indexOf()
+  lastIndexOf
+  trim()
+  trimLeft()
+  trimRight()
+  大小转换
+  toLowerCase()
+  toUpperCase()
+  toLocalLowerCase()
+  toLocalUpperCase()
+  模式匹配
+  match()
+  search()
+  replace()
+  split()
+  其他
+  localeCompare() 比较两个字符串
+  fromCharCode()  接受以或多个字符编码，转成字符串  与charCodeAt()相反
