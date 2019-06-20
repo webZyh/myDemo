@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>事件委托</title>
+</head>
+<body>
+  <ul class="ul">
+    <li>1</li>
+    <li>21</li>
+    <li>14</li>
+    <li>13</li>
+    <li>15</li>
+    <li>16</li>
+  </ul>
+<script>
+window.onload = function(){
+  const oUl = document.querySelector('.ul');
+  oUl.onclick = function(event){
+    console.log(event.target.innerHTML);
+  }
+}  
+</script>
+</body>
+</html>

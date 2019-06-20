@@ -1,0 +1,79 @@
+Dom
+
+所有节点类型都继承自Node类型
+Node类型中定义了12个数值常亮，用于表示所有的节点类型
+nodeType属性：用于表明节点的类型
+ Node.ELEMENT_NODE(1)；
+ Node.ATTRIBUTE_NODE(2)；
+ Node.TEXT_NODE(3)；
+ Node.CDATA_SECTION_NODE(4)；
+ Node.ENTITY_REFERENCE_NODE(5)；
+ Node.ENTITY_NODE(6)；
+ Node.PROCESSING_INSTRUCTION_NODE(7)；
+ Node.COMMENT_NODE(8)；
+ Node.DOCUMENT_NODE(9)；
+ Node.DOCUMENT_TYPE_NODE(10)；
+ Node.DOCUMENT_FRAGMENT_NODE(11)；
+ Node.NOTATION_NODE(12)。
+
+-------------------------------------------
+节点的属性
+  nodeName
+  nodeValue
+  节点关系
+  childNodes（保存着一个NodeList对象）
+  parentNode
+  previousSibling
+  nextSibling
+  firstChild
+  lastChild
+  hasChildNodes()
+  ownerDocument
+操作节点方法
+  appendChild()
+  insertBefore()
+  replaceChild()
+  removeChild
+  cloneNode(true)
+  cloneNode(false)
+-------------------------------------------
+Document类型: 只读的，只能有一个元素子节点
+  document对象是HTMLDocument（继承自Document类型）的一个实例
+  document对象是 window 对象的一个属性
+nodeType = 9;
+-------------------
+document对象的相关属性和方法
+
+  documentElement -> <html>
+  body  -> <body>   所有浏览器都支持document.documentElement和document.body属性
+  doctype -> <!DOCTYPE>
+
+  title：包含着<title>元素中的文本
+  与网页的请求相关：所有这些信息都存在于请求的 HTTP 头部，只不过是通过这些属性让我们能够在JavaScrip中访问它们而已
+    URL:包含页面完整的 URL（即地址栏中显示的 URL）；http://www.wrox.com/WileyCDA/
+    domain：只包含与页面的域名；www.wrox.com
+    referrer：保存着链接到当前页面的那个页面的 URL
+
+  getElementById()
+  getElementsByTagName()  这个方法会返回一个 HTMLCollection 对象,类似于NodeList
+    HTMLCollection对象有一个方法 -> namedItem():通过元素的name特性取得集合中的项
+  getElementsByName():返回带有给定 name 特性的所有元素 
+
+  特殊集合
+    document.anchors
+    document.applets
+    document.forms
+    document.images
+    document.links
+
+  document.implementation属性就是为此（检测浏览器实现了DOM的哪些部分）提供相应信息和功能的对象
+  hasFeature():接受两个参数,要检测的 DOM 功能的名称及版本号
+  document.implementation.hasFeature("XML", "1.0");
+
+  将输出流写入网页
+  write()
+  writeln()
+  open()
+  close() 用于打开和关闭网页的输出流
+-------------------------------------------
+Element类型

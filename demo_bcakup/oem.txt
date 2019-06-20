@@ -130,19 +130,3 @@ uploadShow: true,
   img
     width 50px
     height 50px
-
-
- // 上传产品图片成功后，渲染函数
-productImgRender() {
-  this.$axios.get('/oemApplication/ui/productImg').then((prodData) => {
-    this.productData = prodData.data.data;
-    // console.log(this.productData);
-    const { selectValue } = this;
-    this.productData.forEach((item) => {
-      if (selectValue === item.productTypeId) {
-        this.openImgUrl = item.openImg ? item.openImg : item.defaultOpenImg;
-        this.closeImgUrl = item.closeImg ? item.closeImg : item.defaultCloseImg;
-      }
-    })
-  })
-},   

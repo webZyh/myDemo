@@ -7,7 +7,23 @@
   <title>Document</title>
 </head>
 <body>
-
+<p>
+　　<div id="div" style="background-color:#ff9966;border:1px #ff0000 dashed;">
+　　　　<span>这是一个层</span>
+　　</div> 
+<p>
+<input name="innerHTML" value="innerHTML" type="button" OnClick="alert(div.innerHTML);"> 
+<input name="outerHTML" value="outerHTML" type="button" OnClick="alert(div.outerHTML);"> 
+<input name="innerText" value="innerText" type="button" OnClick="alert(div.innerText);"> 
+<input name="outerText" value="outerText" type="button" OnClick="alert(div.outerText);"> 
 <script src="./func.js"></script> 
+<script>
+var a =1; 
+function f(){
+  alert(a); 
+  var a=2
+}; 
+f();
+</script>
 </body>
 </html>
