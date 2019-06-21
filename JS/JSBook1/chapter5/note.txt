@@ -42,3 +42,10 @@ String
   其他
   localeCompare() 比较两个字符串
   fromCharCode()  接受以或多个字符编码，转成字符串  与charCodeAt()相反
+
+Array的属性
+
+Array的方法  
+
+reverse() 反转数组中的项
+join('*') 数组以 * 隔开形成字符串
