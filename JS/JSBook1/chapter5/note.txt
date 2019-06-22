@@ -1,3 +1,4 @@
+-------------------------------------
 基本包装类型
 
 Number
@@ -11,41 +12,84 @@ Boolean
   toString()
 String
   属性
-  length
+    length
   基本方法
-  valueOf()
-  toString()
+    valueOf()
+    toString()
   字符方法
-  charAt()
-  charCodeAt()
+    charAt()
+    charCodeAt()
   字符串操作
-  concat()
-  slice()
-  substring()
-  substr()
+    concat()
+    slice()
+    substring()
+    substr()
   字符串位置方法
-  indexOf()
-  lastIndexOf
-  trim()
-  trimLeft()
-  trimRight()
+    indexOf()
+    lastIndexOf
+    trim()
+    trimLeft()
+    trimRight()
   大小转换
-  toLowerCase()
-  toUpperCase()
-  toLocalLowerCase()
-  toLocalUpperCase()
+    toLowerCase()
+    toUpperCase()
+    toLocalLowerCase()
+    toLocalUpperCase()
   模式匹配
-  match()
-  search()
-  replace()
-  split()
+    match()
+    search()
+    replace()
+    split()
   其他
-  localeCompare() 比较两个字符串
-  fromCharCode()  接受以或多个字符编码，转成字符串  与charCodeAt()相反
+    localeCompare() 比较两个字符串
+    fromCharCode()  接受以或多个字符编码，转成字符串  与charCodeAt()相反
+-------------------------------------
 
+-------------------------------------
 Array的属性
-
+  length  R W
 Array的方法  
-
-reverse() 反转数组中的项
-join('*') 数组以 * 隔开形成字符串
+  Array.isArray(value) 检测一个对象是不是数组
+  转换方法
+    valueOf()   返回的还是数组
+    toString()  返回由数组中每个值的字符串形式拼接而成的一个以逗号分隔的字符串
+    toLocaleString()
+    join()      返回字符串，区别是可以使用不同的分隔符来构建这个字符串
+  栈方法
+    push()  尾部添加，返回添加后数组的length
+    pop()   尾部删除，返回删除的项（即数组的最后一项）
+  队列方法
+    unshift() 头部添加，返回添加后数组的length
+    shift()   头部删除，返回删除的项（即数组的最后一项）
+  重排序方法
+    reverse() 反转数组项的顺序,返回值是经过排序之后的数组
+    sort()    会根据测试字符串的结果改变原来的顺序,返回值是经过排序之后的数组
+      sort接收一个比较函数作为参数,以便我们指定哪个值位于哪个值的前面。比较函数接收两个参数，如果第一个参数应该位于第二个之前则返回一个负数，如果两个参数相等则返回 0，如果第一个参数应该位于第二个之后则返回一个正数
+      升序： return arg1-arg2
+      降序： return arg2-arg1
+  操作方法
+    concat()  这个方法会先创建当前数组一个副本，然后将接收到的参数添加到这个副本的末尾，返回一个新的数组
+    slice()   返回一个新数组，不会影响原始数组
+    splice()  返回一个数组，该数组中包含从原始数组中删除的项（如果没有删除任何项，则返回一个空数组，原数组会根据splice的操作而发生变化
+      删除  splice(位置，个数)
+      插入  splice(位置，0，要插入的项)
+      替换  splice(位置，要删除的个数，要插入的项)
+  位置方法
+    indexOf()     数组的开头（位置 0）开始向后查找，返回要查找的项在数组中的位置，或者在没找到的情况下返回-1
+    lastIndexOf() 从数组的末尾开始向前查找
+  迭代方法
+    some()：对数组中的每一项运行给定函数，如果该函数对任一项返回 true，则返回 true。
+    every()：对数组中的每一项运行给定函数，如果该函数对每一项都返回 true，则返回 true。
+    filter()：对数组中的每一项运行给定函数，返回该函数会返回 true 的项组成的数组。
+    forEach()：对数组中的每一项运行给定函数。这个方法没有返回值。
+    map()：对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。
+  归并方法
+    reduce()      从数组的第一项开始，逐个遍历到最后，返回一个遍历后的值
+      接收两个参数1、在每一项上调用的函数2、（可选的）作为归并基础的初始值
+        函数接收 4 个参数：前一个值、当前值、项的索引和数组对象
+      var values = [1,2,3,4,5]; 
+      var sum = values.reduce(function(prev, cur, index, array){ 
+      return prev + cur; 
+      }); 
+      alert(sum); //15
+    reduceRight()  从数组的最后一项开始，向前遍历到第一项
