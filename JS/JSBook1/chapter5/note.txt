@@ -39,7 +39,7 @@ String
     match()
     search()
     replace()
-    split()
+    split()     可以基于指定的分隔符将一个字符串分割成多个子字符串，并将结果放在一个数组中,返回值为数组
   其他
     localeCompare() 比较两个字符串
     fromCharCode()  接受以或多个字符编码，转成字符串  与charCodeAt()相反
