@@ -27,12 +27,15 @@ function trim(str){
 /* let str = '?a=1&b=2'
 console.log(getQuery(str,"a")) */
 
-var a=1;
-function f(){
-  alert(a);
-  var a = 2;
-}
-f()
+// 使用replacement作为函数替换
+let str = 'get-element-by-id';
+let reg = /-\w/g;
+const str2 = str.replace(reg,function($){
+  console.log(typeof $);
+  return $.slice(1).toUpperCase()
+})
+console.log(str2);
+
 </script> 
 </body>
 </html>
