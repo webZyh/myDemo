@@ -103,6 +103,10 @@ class PetShop{
     }
     return p;
   }
+  // 扩展-----返回所有的宠物，并打印出来
+  public Pet[] getPets(){
+    return this.pets;
+  }
 }
 
 public class PetShopDemo{
@@ -115,6 +119,8 @@ public class PetShopDemo{
     ps.add(new Cat("金毛","金色的",4));
     ps.add(new Cat("黄狗","黄色的",3));
     print(ps.search("猫"));
+    System.out.println("=============");
+    print(ps.getPets());
   }
   public static void print(Pet p[]){
     for(int i=0;i<p.length;i++){
