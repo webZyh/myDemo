@@ -19,9 +19,9 @@ String
   字符方法
     charAt()
     charCodeAt()
-  字符串操作
+  字符串操作    // 都不会修改字符串本身的值，返回一个新的字符串
     concat()
-    slice()
+    slice()       
     substring()
     substr()
   字符串位置方法
