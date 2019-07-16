@@ -57,3 +57,5 @@ SELECT 什么 FROM 表
 SELECT 字段名 FROM user_table
 SELECT * FROM `user_table`
 SELECT * FROM `user_table` WHERE ID=1   查询id=1的所有数据项
+
+
