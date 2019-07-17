@@ -2,18 +2,19 @@ import java.sql.Connection ;
 import java.sql.DriverManager ;
 import java.sql.SQLException ;
 public class ConnectionDemo02{
-	// ¶¨ÒåMySQLµÄÊı¾İ¿âÇı¶¯³ÌĞò
-	public static final String DBDRIVER = "com.mysql.jdbc.driver" ;
-	// ¶¨ÒåMySQLÊı¾İ¿âµÄÁ¬½ÓµØÖ·
-	public static final String DBURL = "jdbc:mysql://localhost:3306/test" ;
-	// MySQLÊı¾İ¿âµÄÁ¬½ÓÓÃ»§Ãû
+	// å®šä¹‰MySQLçš„æ•°æ®åº“é©±åŠ¨ç¨‹åº
+	// public static final String DBDRIVER = "com.mysql.jdbc.driver" ;
+	public static final String DBDRIVER = "org.gjt.mm.mysql.Driver" ;
+	// å®šä¹‰MySQLæ•°æ®åº“çš„è¿æ¥åœ°å€
+	public static final String DBURL = "jdbc:mysql://localhost:3306/demo" ;
+	// MySQLæ•°æ®åº“çš„è¿æ¥ç”¨æˆ·å
 	public static final String DBUSER = "root" ;
-	// MySQLÊı¾İ¿âµÄÁ¬½ÓÃÜÂë
+	// MySQLæ•°æ®åº“çš„è¿æ¥å¯†ç 
 	public static final String DBPASS = "123" ;
 	public static void main(String args[]){
-		Connection conn = null ;		// Êı¾İ¿âÁ¬½Ó
+		Connection conn = null ;		// æ•°æ®åº“è¿æ¥
 		try{
-			Class.forName(DBDRIVER) ;	// ¼ÓÔØÇı¶¯³ÌĞò
+			Class.forName(DBDRIVER) ;	// åŠ è½½é©±åŠ¨ç¨‹åº
 		}catch(ClassNotFoundException e){
 			e.printStackTrace() ;
 		}
@@ -22,9 +23,9 @@ public class ConnectionDemo02{
 		}catch(SQLException e){
 			e.printStackTrace() ;
 		}
-		System.out.println(conn) ;	// Èç¹û´ËÊ±¿ÉÒÔ´òÓ¡±íÊ¾Á¬½ÓÕı³£
+		System.out.println(conn) ;	// å¦‚æœæ­¤æ—¶å¯ä»¥æ‰“å°è¡¨ç¤ºè¿æ¥æ­£å¸¸
 		try{
-			conn.close() ;			// Êı¾İ¿â¹Ø±Õ
+			conn.close() ;			// æ•°æ®åº“å…³é—­
 		}catch(SQLException e){
 			e.printStackTrace() ;
 		}

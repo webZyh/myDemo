@@ -1,12 +1,12 @@
 public class ConnectionDemo01{
-	// 定义MySQL的数据库驱动程序
-	// public static final String DBDRIVER = "org.gjt.mm.mysql.Driver" ;
-	public static final String DBDRIVER = "com.mysql.jdbc.driver" ;
+	// 瀹氫箟MySQL鐨勬暟鎹簱椹卞姩绋嬪簭
+	public static final String DBDRIVER = "org.gjt.mm.mysql.Driver";
+	// public static final String DBDRIVER = "com.mysql.jdbc.driver" ;
 	public static void main(String args[]){
 		try{
-			Class.forName(DBDRIVER) ;	// 加载驱动程序
+			Class.forName(DBDRIVER);	// 鍔犺浇椹卞姩绋嬪簭
 		}catch(ClassNotFoundException e){
-			// e.printStackTrace() ;
+			e.printStackTrace();
 		}
 	}
 };
