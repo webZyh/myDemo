@@ -250,3 +250,69 @@ JDK9新特性-Jshell： 轻量工具，可以直接输出和进行简单运算
 开发工具IDEA 
 
 IDE（Integrated Development Environment）集成开发环境
+
+项目project -> 模块module -> 包 package
+
+包 package
+  命名： 小写英文和英文句点   （把公司域名倒过来写）
+
+常用快捷键
+ctrl+shift+f10    编译程序  
+alt+4             打开运行结果框
+
+idea基本配置
+  font
+  自动补全(alt+/)  settings -> keymap(快捷键设置)->Main menu -> code -> completion -> basic
+
+*****
+----------
+报错问题记录
+
+有关 Picked up _JAVA_OPTIONS系列错误抛出的问题，这类错误多半是由于在本地正常安装了JDK 或者JRE后，再安装了其它会添加或更改JAVA环境变量的软件，比如测试常用工具QTP的JAVA-ADDIN插件等等，在这些软件的安装过程中，会自动添加一些JAVA环境变量信息，这样就导致了环境变量的冲突和错误，所以当出现这类错误时，只需将除了最初设定的JAVA_HOME和CLASSPATH外，其余自设的JAVA环境变量全部删除即可，或者删除掉相关的JAVA_TOOL_OPTIONS参数。 
+
+出现了错误：需要class, interface或enum
+其实就是，原本默认的txt编码格式应该是ANSI，然而在创建GetLucky.java的编码格式成为了UTF-8，导致文本中存在BOM，java源代码中不可以有BOM，javac无法识别，会出现乱码 。
+BOM（byte-order mark），即字节顺序标记，它是插入到以UTF-8、UTF16或UTF-32编码Unicode文件开头的特殊标记，用来识别Unicode文件的编码类型。对于UTF-8来说，BOM并不是必须的，因为BOM用来标记多字节编码文件的编码类型和字节顺序（big-endian或little-endian）。在绝大多数编辑器中都看不到BOM字符，因为它们能理解Unicode，去掉了读取器看不到的题头信息。若要查看某个Unicode文件是否以BOM开头，可以使用十六进制编辑器。
+***** 
+
+------------------------------
+idea快捷输出
+5.fori    输出for循环快捷键
+psvm      public static void main(String[] args){}
+sout      System.out.println();
+
+------------------------------
+方法定义
+方法是若干语句的功能集合
+定义方法的完整格式:（java基础就是记住格式）
+修饰符  返回值类型  方法名称(参数类型 参数名称, ...){
+  方法体 
+  return 返回值
+}
+
+修饰符： public static
+返回值数据类型： 
+  void： 没有return语句，不会返回结果
+  int:
+  ...
+
+方法名称：小驼峰
+参数类型：进入方法的数据是什么类型
+
+return： 停止当前方法；将后面的返回值还给调用出
+***
+注意：return 后面的“返回值”，必须和方法名称前面的“返回值类型”，保持对应。
+***
+
+----------
+方法调用：
+1、单独调用： 方法名称(参数);
+2、打印调用： System.out.println(方法名称(参数));
+3、赋值调用： 数据类型 变量名称 = 方法名称(参数);  把方法的结果赋值给一个变量
+注意：void： 没有return语句，只能够单独调用，不能进行打印调用或者赋值调用；
+
+----------
+注意：
+  1、方法定义在类中，不能定义在方法中
+  2、return后面的返回值数据，必须和方法的返回值类型一样
+  ...

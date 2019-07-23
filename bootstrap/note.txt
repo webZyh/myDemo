@@ -6,3 +6,30 @@
 组件
 ----------
 
+----------------------------------------
+vue项目安装bootstrap
+--------------------
+bootstrap3
+1、安装jquery： npm install jquery --save;
+2、安装popper.js
+3、安装bootstrap
+
+4、引入jquery
+  在webpack.base.conf.js文件中添加如下代码：
+  const webpack = require('webpack');
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('common'),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      Popper: ['popper.js', 'default']
+    })
+  ],
+5、引入bootstrap
+  在main.js中 
+  import '../node_modules/bootstrap/dist/js/bootstrap.min';
+  import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; 
+--------------------   
+bootstrap4
+  可以省略步骤4
+
