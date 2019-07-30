@@ -261,7 +261,7 @@ ctrl+shift+f10    编译程序
 alt+4             打开运行结果框
 
 idea基本配置
-  font
+  font  字体
   自动补全(alt+/)  settings -> keymap(快捷键设置)->Main menu -> code -> completion -> basic
 
 *****
