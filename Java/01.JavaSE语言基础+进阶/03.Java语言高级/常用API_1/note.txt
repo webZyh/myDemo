@@ -3,3 +3,44 @@ API （应用程序编程接口）  JDK提供现成的类，说明类的使用�
 Scanner
 Random
 ArrayList
+
+------------
+引用类型的一般使用步骤
+1、导包 import 包路径.类名称（import 包路径.*）
+  只有java.lang包下的内容不需要导包，其他的包都需要import导入
+2、创建
+  类名称 对象名 = new 类名称();
+3、使用
+  对象名.成员方法名()
+
+
+Scanner 键盘输入
+
+import java.util.Scanner;
+
+Scanner sc = new Scanner(System.in);  // System.in： 代表从键盘输入 
+int num = sc.nextInt(); // 输入整数
+String str = sc.next(); // 输入字符串
+
+------------
+匿名对象  Anonymous
+new Person()
+  只有右边的对象,没有左边的名字和赋值运算符
+  只能用一次
+  如果确定有一个对象只需要使用唯一的一次，就可以使用匿名对象
+
+匿名对象作为方法的参数/返回值
+
+------------
+Random  产生随机数
+
+import java.util.Random;
+Random r = new Random();  
+int num = r.nextInt();  // 范围：在int范围随机找一个数
+
+------------
+生成指定范围的随机数
+int num = r.nextInt(3)   左闭右开区间[0-3),也就是0~2
+
+------------------------------
+对象数组： 存储对象的数组
