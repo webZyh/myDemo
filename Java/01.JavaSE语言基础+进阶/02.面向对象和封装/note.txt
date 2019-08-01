@@ -110,4 +110,4 @@ this.成员变量
 这样的标准类也叫Java Bean
 
 写完成员变量后可以自动生成代码
-Code  Generate
+Code  Generate   或者使用快捷键 alt+insert

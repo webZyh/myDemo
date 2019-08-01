@@ -1,5 +1,8 @@
 ------------------------------
 API （应用程序编程接口）  JDK提供现成的类，说明类的使用方法  
+
+查询api文档： 看包、new、看方法
+
 Scanner
 Random
 ArrayList
@@ -44,3 +47,70 @@ int num = r.nextInt(3)   左闭右开区间[0-3),也就是0~2
 
 ------------------------------
 对象数组： 存储对象的数组
+
+***任何数据类型都可以作为数组中元素的类型
+int[]
+float[]
+String[]
+Person[] 
+
+数组的缺点： 一旦创建，程序运行期间长度不能改变
+
+------------
+ArrayList 集合类： 和数组的功能类似，长度可以随意改变
+
+ArrayList<E>   <E>泛型
+泛型：
+  就是装在集合当中的所有元素，全都是统一的类型
+  ***只能是引用类型，不能是基本类型***
+
+// 创建了一个ArrayList集合，集合的名称是list，里面装的全都是String字符串类型的数据
+// 备注：从JDK 1.7+开始，右侧的尖括号内部可以不写内容，但是<>本身还是要写的。
+ArrayList<String> list = new ArrayList<>();
+
+注意事项：
+对于ArrayList集合来说，直接打印得到的不是地址值，而是内容。
+如果内容是空，得到的是空的中括号：[]
+
+添加： 
+  list.add("zyh");  // [zyh, ...]
+------------
+ArrayList常用方法：
+  add()
+  get(int index)  // index 索引值，从0开始
+  remove(int index)
+  size()  返回集合的长度
+
+  集合.fori   idea快捷键
+
+------------
+集合中如何存储基本数据类型
+
+如果希望向集合ArrayList当中存储基本类型数据，必须使用基本类型对应的“包装类”。
+
+基本类型    包装类（引用类型，包装类都位于java.lang包下）
+byte        Byte
+short       Short
+int         Integer     【特殊】
+long        Long
+float       Float
+double      Double
+char        Character   【特殊】
+boolean     Boolean
+
+ArrayList<int> list = new ArrayList<>();   // 错误
+ArrayList<Integer> list = new ArrayList<>();
+
+从JDK 1.5+开始，支持自动装箱、自动拆箱。
+自动装箱：基本类型 --> 包装类型
+自动拆箱：包装类型 --> 基本类型
+
+------------
+集合可以作为方法的参数以及方法的返回值
+
+------------------------------
+String 
+
+
+
+
