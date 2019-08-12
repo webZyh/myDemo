@@ -278,7 +278,8 @@ BOM（byte-order mark），即字节顺序标记，它是插入到以UTF-8、UTF
 ------------------------------
 idea快捷输出
 5.fori    输出for循环快捷键
-数组名称.fori 
+数组名称.fori   正序遍历
+数组名称.forr   倒序遍历
 psvm      public static void main(String[] args){}
 sout      System.out.println();
 shift+f6  所有相同代码会一起改变

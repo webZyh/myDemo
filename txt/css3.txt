@@ -1,0 +1,18 @@
+transform: rotate旋转|scale缩放|skew扭曲|translate移动|matrix矩阵变形
+transform: rotate(30deg) scale(10) skew(10deg,5deg) translate(-50%, -50%);
+
+transition主要包含四个属性值：
+(1)  执行变换的属性：transition-property;
+(2)  变换延续的时间：transition-duration;
+(3)  在延续时间段，变换的速率变化：transition-timing-function  //例：平缓进入、先快后慢；
+(4)  变换延迟时间： transition-delay
+需要事件的触发，例如单击、获取焦点、失去焦点等。
+语法：transition: property  duration  timing-function  delay;
+例如：transition: width  2s  ease  0s;
+
+
+box-shadow: h-shadow   v-shadow   blur   spread   color   inset;
+(box-shadow: 水平阴影 垂直阴影 模糊大小 阴影距离 阴影颜色  内部阴影;)
+
+水平阴影可以理解为偏左右哪个方向，如果加入inset，正数偏左，负数偏右，如果没有inset，正数偏右，负数偏左；
+垂直阴影可以理解为偏上下哪个方向，如果加入inset，正数偏上，负数偏下，，如果没有inset，正数偏下，负数偏上；
