@@ -34,7 +34,7 @@ boolean     Boolean
 装箱
 构造方法
   Integer(int i)
-  Integer(String s) 注意：传递的字符串，必须是基本类型的字符串 "100" 正确 "a" 错误，会报出NumberFormatException数字格式化异常
+  Integer(String s) 注意：传递的字符串，必须是基本类型的字符串， "100" 正确， "a" 错误，会报出NumberFormatException（数字格式化异常）
 静态方法
   Integer.valueOf(int i)  
   Integer.valueOf(String s)
