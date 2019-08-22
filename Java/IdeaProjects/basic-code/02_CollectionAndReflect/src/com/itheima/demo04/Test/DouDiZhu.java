@@ -55,24 +55,7 @@ public class DouDiZhu {
             注意:
                 先判断底牌(i>=51),否则牌就发没了
          */
-        for (int i = 0; i < poker.size() ; i++) {
-            //获取每一张牌
-            String p = poker.get(i);
-            //轮流发牌
-            if(i>=51){
-                //给底牌发牌
-                diPai.add(p);
-            }else if(i%3==0){
-                //给玩家1发牌
-                player01.add(p);
-            }else if(i%3==1){
-                //给玩家2发牌
-                player02.add(p);
-            }else if(i%3==2){
-                //给玩家3发牌
-                player03.add(p);
-            }
-        }
+        collection.myDemo.DouDiZhu.method(poker, player01, player02, player03, diPai);
 
         //4.看牌
         System.out.println("刘德华:"+player01);
