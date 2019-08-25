@@ -262,7 +262,7 @@ alt+4             打开运行结果框
 
 idea基本配置
   font  字体
-  自动补全(alt+/)  settings -> keymap(快捷键设置)->Main menu -> code -> completion -> basic
+  自动补全(alt+/)  settings -> keymap(快捷键设置)->Main menu -> code ->    -> basic
 
 *****
 ----------
