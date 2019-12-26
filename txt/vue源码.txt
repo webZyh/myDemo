@@ -1,13 +1,24 @@
 Vue源码分析
 一、准备
-Array.prototype.slice.call(obj)	将伪数组obj变成真正的数组
+1、将伪数组obj变成真正的数组：
+	es5:
+		var arr = Array.prototype.slice.call(obj)
+		var arr = [数组].slice.call(obj)
+		arr就成为真正的数组	
 
-Object.defineProperty(obj, newPropertyName,{ config })  给obj对象设置一个新的属性
-Object.keys(obj)	得到obj对象自身可枚举属性（key值）组成的数组
+call作用：让一个方法成为指定对象的方法
 
-obj.hasOwnProperty(prop)	判断prop是否是obj自身的属性
+	es6:Array.from()	
+伪数组：length属性、下标取值
 
-DocumentFragment	 文档碎片（高效批量更新多个节点）
+2、node.nodeType: 得到节点类型
+
+3、Object.defineProperty(obj, newPropertyName,{ config })  给obj对象设置一个新的属性
+4、Object.keys(obj)	得到obj对象自身可枚举属性（key值）组成的数组
+
+5、obj.hasOwnProperty(prop)	判断prop是否是obj自身的属性
+
+6、DocumentFragment	 文档碎片（高效批量更新多个节点）
 1/创建fragment
 const fragment = document.createDocumentFragment()
 2/取出ul中所有子节点保存到fragment中
