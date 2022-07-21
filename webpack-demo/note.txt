@@ -1,9 +1,30 @@
 版本 4.30.0
 -------------------------------------
-工具---管理复杂项目
+webpack究竟是什么？
+	工具---管理复杂项目
 
-脚手架工具使用webpack为底层代码的构建
+create-react-app
+vue-cli
+	等脚手架工具使用webpack为底层代码的构建
 
+-------------------------------------
+学习内容：
+webpack核心概念
+	loader
+	plugin
+	source map
+	hmr
+webpack进阶
+	Tree Shaking
+	懒加载
+	代码分割
+	缓存
+	shim
+webpack实战配置
+	typescript
+	eslink	
+
+-------------------------------------
 前端工程化，扩充前端开发视野
 
 1、彻底学会Webpack的配置
@@ -13,7 +34,7 @@
 5、步入高级前端工程师行列
 
 -------------------------------------
-npx webpack xxx.js  	打包xx.js文件
+npx webpack index.js  	打包index.js文件
 （npx 会自动查找当前依赖包中的可执行文件，如果找不到，就会去 PATH 里找。如果依然找不到，就会帮你安装！）
 
 webpack 是一个 module bundles（模块打包工具）
